@@ -1,0 +1,44 @@
+{
+  "name": "CompanyAttr",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "columns": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    },
+    "published": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": ""
+    },
+    "employee": {
+      "type": "hasMany",
+      "model": "Employee",
+      "foreignKey": "CompanyAttrId",
+      "through": "EmployeeSet"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

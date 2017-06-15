@@ -1,0 +1,24 @@
+{
+  "apps":
+  {
+    "name": "loopback",
+    "cwd": "./",
+    "script": "./server/server.js",
+    "exec_interpreter": "node",
+//    "args":"-a 13",  //脚本中可能使用到的参数
+//    "interpreter_args":"",  //编译器可能使用到的参数
+    "instance":2,  //启动多少个实例
+    "max_memory_restart":"200M",  //当服务器内存超过该值，系统将重启该进程
+    "env":{"NODE_ENV": "development", "TEST_ENV": "42"},  //设置一些环境变量，可以在应用中使用(process.env.TEST_ENV)
+    "min_uptime": "60s",  //最小运行时间，若进程在启动后小于该时间内停止，则被判断为异常退出，会增加max_restart计数
+    "max_restarts": 30,  //最大重启次数
+    "exec_mode" : "cluster",  //运行模式：fork & cluster
+    "log_date_format":"YYYY-MM-DD HH:mm Z",
+    "error_file" : "./test-err.log",
+    "out_file": "./test-out.log",
+    "pid_file": "./test.pid",
+    "watch": [  //监视文件夹，
+      "common/models"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "name": "Employee",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "employeeNumber": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "identificationId": {
+      "type": "string"
+    },
+    "marriaged": {
+      "type": "string"
+    },
+    "personalMobile": {
+      "type": "string"
+    },
+    "workEmail": {
+      "type": "string"
+    },
+    "birthDay": {
+      "type": "string"
+    },
+    "payTaxIdType": {
+      "type": "string"
+    },
+    "payTaxIdNumber": {
+      "type": "string"
+    },
+    "workActivity": {
+      "type": "string"
+    },
+    "hireDate": {
+      "type": "string"
+    },
+    "departureTime": {
+      "type": "string"
+    },
+    "scoialWorkStartDate": {
+      "type": "string"
+    },
+    "scoialWorkingAge": {
+      "type": "string"
+    },
+    "innerWorkingAge": {
+      "type": "string"
+    },
+    "bankAccount": {
+      "type": "string"
+    },
+    "bankAccountHolder": {
+      "type": "string"
+    },
+    "bankName": {
+      "type": "string"
+    },
+    "bankIdentificationNumberType": {
+      "type": "string"
+    },
+    "bankIdentificationNumber": {
+      "type": "string"
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    },
+    "published": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": ""
+    },
+    "employeeSet": {
+      "type": "hasOne",
+      "model": "EmployeeSet",
+      "foreignKey": "employeeId",
+      "primaryKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

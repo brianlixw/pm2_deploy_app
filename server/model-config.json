@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Message": {
+    "dataSource": null
+  },
+  "player": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "playerinfo": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "playerlog": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Company": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "CompanyAttr": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Employee": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "EmployeeSet": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "CompanyCache": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "tasklog": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "testpm2": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "tasklog",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "operator": {
+      "type": "string",
+      "required": true
+    },
+    "createtime": {
+      "type": "date",
+      "required": true
+    },
+    "msg": {
+      "type": "string"
+    },
+    "md5": {
+      "type": "string"
+    },
+    "issent": {
+      "type": "boolean"
+    },
+    "error": {
+      "type": "boolean"
+    },
+    "errormsg": {
+      "type": "string"
+    },
+    "iscomplete": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

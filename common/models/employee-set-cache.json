@@ -1,0 +1,36 @@
+{
+  "name": "EmployeeSetCache",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "set": {
+      "type": "string",
+      "required": true
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    },
+    "pended": {
+      "type": "boolean",
+      "default": false
+    },
+    "checked": {
+      "type": "boolean",
+      "default": false
+    },
+    "employeeId": {
+      "type": "string"
+    },
+    "companyAttrId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "EmployeeSet",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "set": {
+      "type": "string",
+      "required": true
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    },
+    "published": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "companyAttr": {
+      "type": "belongsTo",
+      "model": "CompanyAttr",
+      "foreignKey": "companyAttrId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

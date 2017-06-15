@@ -1,0 +1,49 @@
+{
+  "name": "Company",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "payCycle": {
+      "type": "string"
+    },
+    "exchangeRate": {
+      "type": "string"
+    },
+    "workCalendar": {
+      "type": "string"
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    },
+    "published": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "companyAttr": {
+      "type": "hasMany",
+      "model": "CompanyAttr",
+      "foreignkey": "companyId"
+    },
+    "employee": {
+      "type": "hasMany",
+      "model": "Employee",
+      "foreignKey": "companyId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

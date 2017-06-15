@@ -1,0 +1,39 @@
+{
+  "name": "CompanyAttrCache",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "columns": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "companyId": {
+      "type": "string"
+    },
+    "expired": {
+      "type": "boolean",
+      "default": false
+    },
+    "pended": {
+      "type": "boolean",
+      "default": false
+    },
+    "checked": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

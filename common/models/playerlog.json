@@ -1,0 +1,48 @@
+{
+  "name": "playerlog",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "operator": {
+      "type": "string",
+      "required": true
+    },
+    "createtime": {
+      "type": "date",
+      "required": true
+    },
+    "msg": {
+      "type": "string",
+      "required": true
+    },
+    "md5": {
+      "type": "string",
+      "required": true
+    },
+    "issent": {
+      "type": "boolean",
+      "required": true
+    },
+    "error": {
+      "type": "boolean",
+      "required": true
+    },
+    "errormsg": {
+      "type": "string"
+    },
+    "iscomplete": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
